@@ -1,0 +1,32 @@
+[project]
+name = "qprov"
+version = "0.4.0"
+description = "Provenance tracker for math research computations"
+authors = [{name = "Patrick Taylor", email = "caymentechnologies@gmail.com"}]
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+dependencies = [
+    "click>=8.0",
+    "psutil>=5.9",
+    "gitpython>=3.1",
+    "hypothesis>=6.100",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7", "pytest-cov", "ruff"]
+gpu = ["pynvml>=11"]
+
+[project.scripts]
+qprov = "qprov.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/qprov"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra -q"
