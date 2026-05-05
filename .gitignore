@@ -1,0 +1,70 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Test / coverage artifacts
+.pytest_cache/
+.hypothesis/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+coverage.xml
+*.cover
+
+# Type checkers / linters
+.mypy_cache/
+.ruff_cache/
+
+# Virtual envs
+.venv/
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# qprov stores generated locally (the project keeps its own under .qprov/)
+.qprov/
+*.sqlite
+*.sqlite-journal
+
+# Example run artifacts
+example/.qprov/
+example/*.tex.bak
+
+# Local-only override notes
+*.local.md
+
+# LaTeX source and build artifacts for engine-overview.pdf; only the PDF is committed
+engine-overview.tex
+engine-overview.aux
+engine-overview.log
+engine-overview.out
+engine-overview.synctex.gz
